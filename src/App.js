@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import PlantList from './components/PlantList';
+import PlantForm from './components/PlantForm';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [plants, setPlants] = useState([]);
+
+  const addPlant = (plant) => {
+    setPlants([...plants, plant]);
+  };
+
+  const removePlant = (id) => {
+    setPlants(plants.filter(plant => plant.id !== id));
+  };
+
+  const editPlant = (updatedPlant) => {
+    setPlants(plants.map(plant => (plant.id === updatedPlant.id ? updatedPlant : plant)));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Lista de Plantas para Cuidar</h1>
+      <PlantForm addPlant={addPlant} />
+      <PlantList plants={plants} removePlant={removePlant} editPlant={editPlant} />
     </div>
   );
-}
+};
 
 export default App;

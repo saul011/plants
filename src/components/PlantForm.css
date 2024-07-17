@@ -1,0 +1,28 @@
+.plant-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .plant-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .plant-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #a43aad;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .plant-form button:hover {
+    background-color: #9c38bd;
+  }
+  

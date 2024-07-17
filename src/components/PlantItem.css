@@ -1,0 +1,46 @@
+.plant-item {
+    background-color: #fafafa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .plant-item h2 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .plant-item p {
+    margin: 0;
+    color: #666;
+  }
+  
+  .plant-item button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .plant-item button:first-of-type {
+    background-color: #5be659;
+    color: white;
+  }
+  
+  .plant-item button:first-of-type:hover {
+    background-color:  #21ac28;
+  }
+  
+  .plant-item button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .plant-item button:last-of-type:hover {
+    background-color: #c82333;
+  }
+  
